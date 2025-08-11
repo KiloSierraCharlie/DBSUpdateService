@@ -2,6 +2,8 @@
 
 namespace KiloSierraCharlie\DBSUpdateService\Models;
 
+use KiloSierraCharlie\DBSUpdateService\Exceptions\InvalidResponseException;
+
 enum StatusCheckResultType: string
 {
     case SUCCESS = 'SUCCESS';
