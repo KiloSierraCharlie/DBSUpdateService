@@ -1,5 +1,5 @@
 {
-    "version": "0.1",
+    "version": "1.0",
     "name": "kilosierracharlie/dbsupdateservice",
     "description": "A PHP library for interacting with the DBS update service API.",
     "keywords": ["dbs", "disclosure", "crb", "update service", "api"],
