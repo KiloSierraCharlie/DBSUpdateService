@@ -1,5 +1,5 @@
 {
-    "version": "1.0",
+    "version": "1.1",
     "name": "kilosierracharlie/disclosurebarringservice",
     "description": "A PHP library for interacting with the DBS update service API.",
     "keywords": ["dbs", "disclosure", "crb", "update service", "api"],
