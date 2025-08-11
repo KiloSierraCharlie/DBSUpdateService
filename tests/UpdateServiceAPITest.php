@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace KiloSierraCharlie\DBSUpdateService\Tests;
+namespace KiloSierraCharlie\DisclosureBarringService\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\TransferException;
@@ -16,15 +16,15 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\Psr7\Response;
-use KiloSierraCharlie\DBSUpdateService\DBSUpdateServiceAPI;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\AccessDeniedException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\CertificateNotFoundException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\ConnectionFailureException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\InvalidResponseException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\MalformedDataException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\AccessDeniedException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\CertificateNotFoundException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\ConnectionFailureException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\InvalidResponseException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\MalformedDataException;
+use KiloSierraCharlie\DisclosureBarringService\UpdateServiceAPI;
 use PHPUnit\Framework\TestCase;
 
-final class DBSUpdateServiceAPITest extends TestCase
+final class UpdateServiceAPITest extends TestCase
 {
     private const XML_OK = '<statusCheckResult><statusCheckResultType>SUCCESS</statusCheckResultType><status>BLANK_NO_NEW_INFO</status><forename>JOHN</forename><surname>SMITH</surname><printDate class="sql-date">2020-01-01</printDate></statusCheckResult>';
 
@@ -43,9 +43,9 @@ final class DBSUpdateServiceAPITest extends TestCase
         ]);
     }
 
-    private function makeApi(Client $client): DBSUpdateServiceAPI
+    private function makeApi(Client $client): UpdateServiceAPI
     {
-        $api = new DBSUpdateServiceAPI('Test', 'Alice', 'Smith');
+        $api = new UpdateServiceAPI('Test', 'Alice', 'Smith');
 
         $ref = new \ReflectionClass($api);
         $prop = $ref->getProperty('client');

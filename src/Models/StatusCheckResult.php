@@ -1,8 +1,8 @@
 <?php
 
-namespace KiloSierraCharlie\DBSUpdateService\Models;
+namespace KiloSierraCharlie\DisclosureBarringService\Models;
 
-use KiloSierraCharlie\DBSUpdateService\Exceptions\InvalidResponseException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\InvalidResponseException;
 
 enum StatusCheckResultType: string
 {

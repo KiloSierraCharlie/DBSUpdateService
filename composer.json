@@ -1,10 +1,10 @@
 {
     "version": "1.0",
-    "name": "kilosierracharlie/dbsupdateservice",
+    "name": "kilosierracharlie/disclosurebarringservice",
     "description": "A PHP library for interacting with the DBS update service API.",
     "keywords": ["dbs", "disclosure", "crb", "update service", "api"],
     "minimum-stability": "alpha",
-    "homepage": "https://github.com/KiloSierraCharlie/DBSUpdateService",
+    "homepage": "https://github.com/KiloSierraCharlie/DisclosureBarringService",
     "license": "GPL-3.0-only",
     "authors": [
         {
@@ -13,14 +13,14 @@
         }
     ],
     "autoload": {
-        "psr-4": {"KiloSierraCharlie\\DBSUpdateService\\": "src/"},
+        "psr-4": {"KiloSierraCharlie\\DisclosureBarringService\\": "src/"},
         "exclude-from-classmap": [
             "/tests/"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "KiloSierraCharlie\\DBSUpdateService\\Tests\\": "tests/"
+            "KiloSierraCharlie\\DisclosureBarringService\\Tests\\": "tests/"
         }
     },
     "require": {

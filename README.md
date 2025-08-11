@@ -7,10 +7,10 @@ The recommended way to install this library is [through Composer](https://getcom
 This will install the latest supported version:
 
 ```bash
-$  composer require KiloSierraCharlie/DBSUpdateService
+$  composer require KiloSierraCharlie/DisclosureBarringService
 ```
 ## Configuration
-When initiating the `DBSUpdateServiceAPI` class you'll be required to pass the following details, which will be visible to the certificate holder:
+When initiating the `UpdateServiceAPI` class you'll be required to pass the following details, which will be visible to the certificate holder:
 |Variable         |Description                                     |Example          |
 |-----------------|------------------------------------------------|-----------------|
 |ORGANISATION_NAME|The name of your organisation.                  |ACME Inc.        |
@@ -24,9 +24,9 @@ You can use this package in a standalone fashion, or as part of a framework such
 ### Standalone Use
 ```php
 <?php
-use KiloSierraCharlie\DBSUpdateService\DBSUpdateServiceAPI;
+use KiloSierraCharlie\DisclosureBarringService\UpdateServiceAPI;
 
-$updateService = new DBSUpdateServiceAPI( "ORGANISATION_NAME", "YOUR_FORENAME", "YOUR_SURNAME" );
+$updateService = new UpdateServiceAPI( "ORGANISATION_NAME", "YOUR_FORENAME", "YOUR_SURNAME" );
 $result = $updateService->getCertificateStatus( CERTIFICATE_NUMBER, "CERTIFICATE_SURNAME", DATE_OF_BIRTH );
 
 $result->isCurrent(); #Boolean
@@ -34,7 +34,7 @@ $result->isClear(); #Boolean
 ```
 
 ### Symfony Use
-Firstly you'll need to configure the service, the easiest way would be to use the AutoWire to pass environment variables. You could manually create an instance of `DBSUpdateServiceAPI` in your class and pass these from a user object if required. 
+Firstly you'll need to configure the service, the easiest way would be to use the AutoWire to pass environment variables. You could manually create an instance of `UpdateServiceAPI` in your class and pass these from a user object if required. 
 
 **.env**:
 ```Dotenv
@@ -46,7 +46,7 @@ DBS_SURNAME=Check
 ```yaml
 services:
     ...
-    KiloSierraCharlie\DBSUpdateService\DBSUpdateServiceAPI:
+    KiloSierraCharlie\DisclosureBarringService\UpdateServiceAPI:
         arguments:
             - '%env(DBS_ORG_NAME)%'
             - '%env(DBS_FORENAME)%'
@@ -55,10 +55,10 @@ services:
 
 **In your controller/command etc**:
 ```php
-use KiloSierraCharlie\DBSUpdateService\DBSUpdateServiceAPI;
+use KiloSierraCharlie\DisclosureBarringService\UpdateServiceAPI;
 ...
 #[Route('/check_dbs', name: 'check_dbs')]
-public function check_dbs( DBSUpdateServiceAPI $updateService, Request $request ){
+public function check_dbs( UpdateServiceAPI $updateService, Request $request ){
     ...
     $result = $updateService->getCertificateStatus( $request->request->get("CERTIFICATE_ID"),
                                                     $request->request->get("CERTIFICATE_SURNAME"),

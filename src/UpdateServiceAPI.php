@@ -8,19 +8,19 @@
  * file that was distributed with this source code.
  */
 
-namespace KiloSierraCharlie\DBSUpdateService;
+namespace KiloSierraCharlie\DisclosureBarringService;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\TransferException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\AccessDeniedException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\CertificateNotFoundException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\ConnectionFailureException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\MalformedDataException;
-use KiloSierraCharlie\DBSUpdateService\Exceptions\UnconfiguredException;
-use KiloSierraCharlie\DBSUpdateService\Models\StatusCheckResult;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\AccessDeniedException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\CertificateNotFoundException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\ConnectionFailureException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\MalformedDataException;
+use KiloSierraCharlie\DisclosureBarringService\Exceptions\UnconfiguredException;
+use KiloSierraCharlie\DisclosureBarringService\Models\StatusCheckResult;
 
-final class DBSUpdateServiceAPI
+final class UpdateServiceAPI
 {
     private $baseURL = 'https://secure.crbonline.gov.uk';
     private $client;

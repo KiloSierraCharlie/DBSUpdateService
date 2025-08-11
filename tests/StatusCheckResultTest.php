@@ -8,11 +8,11 @@
  * file that was distributed with this source code.
  */
 
-namespace KiloSierraCharlie\DBSUpdateService\Tests;
+namespace KiloSierraCharlie\DisclosureBarringService\Tests;
 
-use KiloSierraCharlie\DBSUpdateService\Models\StatusCheckResult;
-use KiloSierraCharlie\DBSUpdateService\Models\StatusCheckResultType;
-use KiloSierraCharlie\DBSUpdateService\Models\StatusCode;
+use KiloSierraCharlie\DisclosureBarringService\Models\StatusCheckResult;
+use KiloSierraCharlie\DisclosureBarringService\Models\StatusCheckResultType;
+use KiloSierraCharlie\DisclosureBarringService\Models\StatusCode;
 use PHPUnit\Framework\TestCase;
 
 final class StatusCheckResultTest extends TestCase
