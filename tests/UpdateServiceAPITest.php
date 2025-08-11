@@ -150,6 +150,6 @@ final class UpdateServiceAPITest extends TestCase
         $api = $this->makeApi($client);
 
         $this->expectException(MalformedDataException::class);
-        $api->getCertificateStatus('012345678901', 'SMITH', '201001-01-01');
+        $api->getCertificateStatus('012345678901', 'SMITH', 'TEST_WRONG_DATA');
     }
 }
