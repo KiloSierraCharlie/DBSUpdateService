@@ -1,0 +1,24 @@
+{
+    "version": "0.1",
+    "name": "kilosierracharlie/dbsupdateservice",
+    "description": "A PHP library for interacting with the DBS update service API.",
+    "keywords": ["dbs", "disclosure", "crb", "update service", "api"],
+    "minimum-stability": "alpha",
+    "homepage": "https://github.com/KiloSierraCharlie/DBSUpdateService",
+    "require": {
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Kieran Cross",
+            "homepage": "https://github.com/KiloSierraCharlie"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"KiloSierraCharlie\\DBSUpdateService\\": "src/"},
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    }
+}
