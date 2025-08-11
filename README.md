@@ -1,6 +1,3 @@
-> [!WARNING]
-> This package does not currently contain tests - these are a work-in-progress hence version number. Tests will be created in due course.
-
 # Disclosure & Barring Service (DBS) Update Service
 A PHP library for interacting with the DBS update service API.
 *Please ★ this package if you found it useful :)*
